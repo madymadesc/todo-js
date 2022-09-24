@@ -1,13 +1,23 @@
 'use strict'
 
-btn.onclick = function add(){
+form.onsubmit = function add(){
     const li = document.createElement("li");
-    li.textContent = champ.value;
+    const span = document.createElement("span");
 
+    li.innerHTML = champ.value;
+    span.textContent = " X ";
+    span.onclick = () => del(li);
+
+    li.appendChild(span)
     ol.appendChild(li);
+    
     champ.value = "";
+
+    return false;
+    // e.preventDefault();
+
+}
+function del(element){
+    element.remove();
 }
 
-
-div1.textContent = "mady.camara";
-div2.innerHTML = "<i>camara.mady</i>";
