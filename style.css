@@ -10,7 +10,7 @@ html, body{
 }
 
 body{
-    background: linear-gradient(#318ffa 0%, #fff 100%);
+    background: linear-gradient(#FFF 0%, #FF3D00 100%);
     font-family: 'Roboto', sans-serif;
 }
 
@@ -20,7 +20,7 @@ body{
   font-size: 5vw;
   text-transform: uppercase;
   text-decoration-line: overline;
-  text-decoration-color: #8add92;
+  text-decoration-color: #FF3D00;
 }
 
 .form{
@@ -31,26 +31,30 @@ body{
     }
 .champ{
     width: 72vw;
-    background-color: #8add92;
+    background-color: transparent;
     padding-left: 1vw;
 }
 
+input{
+  outline-color: #F2AA00;
+}
+
 .champ, .btn{
-    border: 2px solid teal;
+    border: 2px solid #F2AA00;
     border-radius: 5px;
     font-size: 7vw;
 }
 
 .btn{
     width: 27vw;
-    background-color: #8add92;
-    color: teal;
+    background-color: #F2AA00;
+    color: #FFF;
     cursor: pointer;
     transition:  0.5s;
 }
 
 .btn:hover{
-  background-color: #a1f0a9;
+  background-color: #ecaf1f;
 }
 .noTache{
     font-style: italic;
@@ -66,8 +70,8 @@ ol {
   }
   li {
     counter-increment: my-awesome-counter;
-    color: teal;
-    background-color: #dedcdce2;
+    color: #000;
+    background-color: #fff;
     margin-bottom: 2px;
     border-radius: 5px;
     font-size: 6vw;
@@ -97,7 +101,7 @@ ol {
   }
 
   .gold{
-    color: gold;
+    color: #F2AA00;
   }
   .texte{
     display: inline-block;
