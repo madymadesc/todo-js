@@ -1,0 +1,126 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+}
+
+body{
+    background: linear-gradient(#318ffa 0%, #fff 100%);
+    font-family: 'Roboto', sans-serif;
+}
+
+#tilte{
+  text-align: center;
+  margin: 5vh auto;
+  font-size: 5vw;
+  text-transform: uppercase;
+  text-decoration-line: overline;
+  text-decoration-color: #8add92;
+}
+
+.form{
+    display: flex;
+    justify-content: space-around;
+    height: 8vh;
+    margin-bottom: 4vh;
+    }
+.champ{
+    width: 72vw;
+    background-color: #8add92;
+    padding-left: 1vw;
+}
+
+.champ, .btn{
+    border: 2px solid teal;
+    border-radius: 5px;
+    font-size: 7vw;
+}
+
+.btn{
+    width: 27vw;
+    background-color: #8add92;
+    color: teal;
+    cursor: pointer;
+    transition:  0.5s;
+}
+
+.btn:hover{
+  background-color: #a1f0a9;
+}
+.noTache{
+    font-style: italic;
+    font-size: 6vw;
+    margin-left: 1vw;
+}
+
+ol {
+    counter-reset: my-awesome-counter;
+    list-style: none;
+    padding-left: 1vw;
+    padding-right: 1vw;
+  }
+  li {
+    counter-increment: my-awesome-counter;
+    color: teal;
+    background-color: #dedcdce2;
+    margin-bottom: 2px;
+    border-radius: 5px;
+    font-size: 6vw;
+    display: flex;
+    align-items: center;
+  }
+ 
+  li::before {
+    content: counter(my-awesome-counter) "~ ";
+    color: #747474;
+  }
+
+  .delete, .urgent{
+    cursor: pointer;
+    transition: all 0.5s;
+  }
+  .delete{
+    color: orangered;
+  }
+
+  .urgent{
+    color: gray;
+  }
+
+  .delete:hover, .urgent:hover{
+    transform: rotate(360deg);
+  }
+
+  .gold{
+    color: gold;
+  }
+  .texte{
+    display: inline-block;
+    width: 78vw;
+    word-wrap: break-word;
+  }
+  .spanOpt{
+    display: flex;
+    flex: auto;
+    justify-content: flex-end;
+  }
+
+  .material-icons.md-24{
+    font-size: 6vw;
+  }
+
+  /* medias Queries */
+
+  @media screen and (min-width: 700px) {
+    .champ, .btn{
+      font-size: 3rem;
+    }
+    .noTache, .material-icons.md-24, li{
+      font-size: 2.5rem;
+    }
+  }
