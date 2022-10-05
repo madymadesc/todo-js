@@ -1,23 +1,51 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#FF3D00">
+    <meta name="description" content="Author: Mady Mades Camara, This is a todo list with the three main web languages HTML-CSS-JS">
     <title>Js todo liste</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="script.js" defer></script>
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="shortcut icon" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/carousel.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" crossorigin="anonymous">
+    <script src="js/script.js" defer></script>
 </head>
+
 <body>
-    <h1 id="tilte">Js todo liste</h1>
-    <form id="form" class="form">
-        <input id="champ" type="text" placeholder="Ajouter une tâche..." required autocomplete="off" class="champ">
-        <button type="submit" id="btn" class="btn">+ Add</button>
-    </form>
-    <div id="noTache" class="noTache">Pas de tache en cour...</div>
-    <ol id="ol">
-        
-    </ol>
+    <main>
+        <section id="header">
+            <header>
+                <h1 id="tilte">Js todo liste</h1>
+            </header>
+        </section>
+        <section id="carousel" class="carousel">
+            <figure class="icon-cards mt-3">
+                <div class="icon-cards-content">
+                    <div class="icon-cards-item d-flex align-items-center justify-content-center"></div>
+                    <div class="icon-cards-item d-flex align-items-center justify-content-center"></div>
+                    <div class="icon-cards-item d-flex align-items-center justify-content-center"></div>
+                </div>
+            </figure>
+        </section>
+        <section id="separator">
+        </section>
+        <section>
+            <form id="form" class="form">
+                <input id="champ" type="text" placeholder="Ajouter une tâche..." required autocomplete="off" class="champ">
+                <button type="submit" id="btn" class="btn">+ Add</button>
+            </form>
+            <div id="noTache" class="noTache">Pas de tache en cour...</div>
+            <ol id="ol">
+    
+            </ol>
+        </section>
+    </main>
 </body>
+
 </html>

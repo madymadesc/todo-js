@@ -3,24 +3,24 @@
 ol.innerHTML = localStorage.getItem("list");
 
 const spanDels = document.querySelectorAll(".delete");
-for(let span of spanDels){
+for (let span of spanDels) {
     span.onclick = () => del(span.parentElement.parentElement);
 }
 
 const spanUrgs = document.querySelectorAll(".urgent");
-for(let span of spanUrgs){
+for (let span of spanUrgs) {
     span.onclick = () => urgent(span);
 }
 
-noTache.style.display = (ol.innerHTML == "")? "block" : "none";
+noTache.style.display = (ol.innerHTML == "") ? "block" : "none";
 
-form.onsubmit = function add(){
+form.onsubmit = function add() {
     const li = document.createElement("li");
 
     const texte = document.createElement("span");
     texte.classList.add("texte");
     texte.textContent = champ.value;
-    
+
     const spanDel = document.createElement("span");
     spanDel.classList.add("delete", "material-icons", "md-24");
     spanDel.textContent = "delete_forever";
@@ -37,8 +37,8 @@ form.onsubmit = function add(){
 
     spanOpt.appendChild(spanUrg);
     spanOpt.appendChild(spanDel);
-   
-    
+
+
 
     li.appendChild(texte);
     li.appendChild(spanOpt);
@@ -52,12 +52,12 @@ form.onsubmit = function add(){
     // e.preventDefault();
 
 }
-function del(element){
-    element.remove(); 
-    noTache.style.display = (ol.innerHTML == "")? "block" : "none";
+function del(element) {
+    element.remove();
+    noTache.style.display = (ol.innerHTML == "") ? "block" : "none";
     localStorage.setItem("list", ol.innerHTML);
 }
-function urgent(element){
+function urgent(element) {
     element.classList.toggle("gold");
     localStorage.setItem("list", ol.innerHTML);
 }
@@ -65,3 +65,11 @@ function urgent(element){
 /** empecher le resising */
 const metas = document.getElementsByTagName('meta');
 metas[2].content = `width=device-width, height= ${window.innerHeight} initial-scale=1.0, maximum-scale=5.0,user-scalable=0`;
+
+// PWA
+
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js')
+    })
+}

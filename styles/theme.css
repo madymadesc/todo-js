@@ -1,0 +1,8 @@
+/* Theme root */
+:root {
+    --theme-white: #fff;
+    --theme-orangred: #ff3d00;
+    --theme-back: #000;
+    --theme-orange: #f2aa00;
+    --theme-gray: #808080;
+  }
