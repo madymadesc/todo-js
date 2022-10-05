@@ -73,3 +73,17 @@ if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('sw.js')
     })
 }
+
+/**Bouton Installation Application*/
+window.onbeforeinstallprompt = (event) => 
+{
+    event.preventDefault(); // annuler la banniere par defaut
+    installBtn.classList.add("silde"); //affiche la banniere perso
+
+    installBtn.onclick = () => 
+    {
+        installBtn.classList.remove("silde"); //faire disparaitre le bouton
+        setTimeout(()=>installBtn.style.display = "none",500);
+        event.prompt(); //permettre l'installation
+    };
+};
